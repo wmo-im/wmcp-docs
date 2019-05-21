@@ -19,10 +19,10 @@ There are two sources:
 Below is the NOAA Title Guidance:
 Style Guidelines
 A good archival title summarizes what, where and when data were collected so that a data consumer can read the title and make an informed decision about learning more about the data.
-●	Capitalize all major words (nouns, pronouns, verbs, adjectives, adverbs, and some conjunctions).
-●	Avoid using acronyms unless defined in the abstract, especially for projects or organizations. Exception applies to “NOAA” as our audience is familiar with our acronym.
-●	If you include an acronym, spell out the meaning of the acronym then put the acronym in parentheses after the meaning. Do not assume that everyone reading the title will know or understand all acronyms or jargon. Some common acronyms may be widely understood within a specific domain.
-●	Always, spell out the title acronym at least once in the abstract text.
+*	Capitalize all major words (nouns, pronouns, verbs, adjectives, adverbs, and some conjunctions).
+*	Avoid using acronyms unless defined in the abstract, especially for projects or organizations. Exception applies to “NOAA” as our audience is familiar with our acronym.
+*	If you include an acronym, spell out the meaning of the acronym then put the acronym in parentheses after the meaning. Do not assume that everyone reading the title will know or understand all acronyms or jargon. Some common acronyms may be widely understood within a specific domain.
+*	Always, spell out the title acronym at least once in the abstract text.
 
 WIS Guidance to be referenced here:  
 
@@ -32,11 +32,22 @@ Same as above here, a guidance documentation should be provided and established.
 What is the existing guidance source: WMO Guidance to be added
 
 Well know bad templates for abstract should be flagged to be gradually replaced.
-For instance the automatically generated bulletin records should be replaced by records having a valid description. This can be easily detected automatically and referenced.
-EDX01 BUFR bulletin available from EUMP (EUMETSAT - DARMSTADT)
-Satellite Centre EUMETSAT Darmstadt - EUMETSAT
----- The bulletin is coded as BUFR code form: FM 94 (BUFR, Binary universal form for the >representation of meteorological data) . (Refer to WMO No.306 - Manual on Codes for the >definition of WMO international codes) ---- The IEDX01 TTAAii Data Designators decode (2) as: T1 >(I): Observational data (Binary coded) - BUFR. A2 (X): Global Area (area not definable). (2: Refer to >WMO No.386 - Manual on the GTS - Attachment II.5) ---- WMO No.9 - Volume C1 'Remarks' field: >IASI SOUNDING (TEMP AND HUMIDITY) GLOBAL DATA`
+For instance the automatically generated bulletin records should be replaced by records having a valid description. This can be easily detected automatically and referenced. Below is an example of the template used for "documenting" bulletins.
 
+>---- The bulletin is coded as BUFR code form:
+>FM 94 (BUFR, Binary universal form for the representation of meteorological data) .
+>
+>
+>(Refer to WMO No.306 - Manual on Codes for the definition of WMO international codes)
+>
+>---- The IEDX01 TTAAii Data Designators decode (2) as:
+>T1 (I): Observational data (Binary coded) - BUFR.
+>A2 (X): Global Area (area not definable).
+>
+>(2: Refer to WMO No.386 - Manual on the GTS - Attachment II.5)
+>
+>---- WMO No.9 - Volume C1 'Remarks' field:
+>IASI SOUNDING (TEMP AND HUMIDITY) GLOBAL DATA
 
 ## D.	Valid Station Identifier
 A station id when provided should a WIGOS identifier long version, ie: https://oscar.wmo.int/surface//index.html#/search/station/stationReportDetails/0-20000-0-10505
