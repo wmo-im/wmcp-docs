@@ -1,0 +1,12 @@
+## C.	Good quality abstract
+
+Same as above here, a guidance documentation should be provided and established.
+What is the existing guidance source: WMO Guidance to be added
+
+Well know bad templates for abstract should be flagged to be gradually replaced.
+For instance the automatically generated bulletin records should be replaced by records having a valid description. This can be easily detected automatically and referenced.
+EDX01 BUFR bulletin available from EUMP (EUMETSAT - DARMSTADT)
+Satellite Centre EUMETSAT Darmstadt - EUMETSAT
+- The bulletin is coded as BUFR code form: FM 94 (BUFR, Binary universal form for the >representation of meteorological data) . (Refer to WMO No.306 - Manual on Codes for the >definition of WMO international codes)
+- The IEDX01 TTAAii Data Designators decode (2) as: T1 >(I): Observational data (Binary coded) - BUFR. A2 (X): Global Area (area not definable). (2: Refer to >WMO No.386 - Manual on the GTS - Attachment II.5)
+- WMO No.9 - Volume C1 'Remarks' field: >IASI SOUNDING (TEMP AND HUMIDITY) GLOBAL DATA`

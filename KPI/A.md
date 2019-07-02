@@ -1,0 +1,4 @@
+## A. Compliance to WMO Core Profile and its mandatory elements
+
+They should be derived from WMCP documentation part 2 and the rubrik checker.
+To be done

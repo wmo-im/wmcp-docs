@@ -1,0 +1,3 @@
+## G.	Bulletins have an ongoing temporal extent
+Bulletins should have an ongoing temporal extent ie, from 2019-01-01 til now.
+It can be enforced automatically.
