@@ -1,3 +1,22 @@
-== J. Deadlinks
+== J. Broken links
 
-Detection of dealinks contributing to the overall quality score
+Detection of broken links contributing to the overall quality score.
+
+=== J.1 Why broken links can potentially damage your business ?
+
+Broken links damage the user experience and gives the impression to users that the site is not maintained (88% of the online consumers are less likely to return to a site after a bad experience). In addition broken links affects search engine rankings as having too often or too many broken links affects the reputation of your website towards Search Engines.
+
+=== J.2 Definition of a quality KPI regarding broken links
+
+To improve the search experience, broken links should be regularly crawled. Different packages can be installed and used to implement a regular broken link detection.
+For instance, the following package can be used to find broken links
+
+Example of tool could be used and integrated in the GISC quality checking:
+
+- https://github.com/bartdag/pylinkvalidator[pylinkvalidator]: Python package that can be used to check on broken links
+
+=== J.3 Open questions
+It should be assessed how the different GISC can be efficiently crawled for finding broken links. Most the GISC are providing their results via dynamic pages that do not make crawling possible. What should be checked is the content of the catalogue (products) and all the links they are exposing. If the site is creating dynamic content, the provision of a sitemap file dynamically created should allow all automated crawlers (ie, link detectors, search engine robots) to check on the broken links.
+
+
+
