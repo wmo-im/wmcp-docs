@@ -1,21 +1,27 @@
-include::A.adoc[]
+= WMCP Metadata Quality KPIs
 
-include::B.adoc[]
 
-include::C.adoc[]
+This document intend to summarize the different Key performance indicators that have been expressed in the discussion available here: https://github.com/wmo-im/wmcp/issues/2
 
-include::D.adoc[]
 
-include::E.adoc[]
+== A. link:A.adoc[Compliance to WMO Core Profile and its mandatory elements]
 
-include::F.adoc[]
+== B. link:B.adoc[Good quality title]
 
-include::G.adoc[]
+== C.link:C.adoc[Good quality abstract]
 
-include::H.adoc[]
+== D. link:D.adoc[Valid Station Identifier]
 
-include::I.adoc[]
+== E. link:E.adoc[Bulletin metadata availability]
 
-include::J.adoc[]
+== F. link:F.adoc[Link for WMOEssential data]
 
-include::K.adoc[]
+== G. link:G.adoc[Bulletins have an ongoing temporal extent]
+
+== H. link:H.adoc[Data Parameter Keyword]
+
+== I. link:I.adoc[GraphicOverview for non bulletins metadata records]
+
+== J. link:J.adoc[Broken links]
+
+== K. link:K.adoc[Data Policy Possible combination]
