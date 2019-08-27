@@ -8,17 +8,14 @@ quality of the title. May some elements can be verified (avoid acronyms,
 ….) but the general concensusconsensus is that a guidance should be
 developed for WMCP records.
 
-There are two sources:
+The Task Team recommends to implement the following Style Guidelines derived from the NOAA guidance:
 
-Below is the NOAA Title Guidance: Style Guidelines A good archival title
-summarizes what, where and when data were collected so that a data
-consumer can read the title and make an informed decision about learning
-more about the data.
+A good archival title summarizes *what, where and when* data were collected so that a data consumer can read the title and make an informed decision about learning more about the data.
 
 * Capitalize all major words (nouns, pronouns, verbs, adjectives,
 adverbs, and some conjunctions).
 * Avoid using acronyms unless defined in the abstract, especially for
-projects or organizations. Exception applies to ``NOAA'' as our audience
+projects or organizations. Exception applies to _NOAA_ as our audience
 is familiar with our acronym.
 * If you include an acronym, spell out the meaning of the acronym then
 put the acronym in parentheses after the meaning. Do not assume that
@@ -28,4 +25,60 @@ domain.
 * Always, spell out the title acronym at least once in the abstract
 text.
 
-WIS Guidance to be referenced here:
+=== WIS Guidance to be referenced here:
+
+link:http://wis.wmo.int/file=3291[WMCP Guidance]
+
+The Product Title and the Product Abstract are the two most relevant elements in the WCMP metadata
+record, in the context of the WIS Product catalogues, as those two elements are presented to the users in
+the search results and product description page. They therefore need to focus on highlighting the
+product's key characteristics, to assist users searching for relevant products.
+The title should be as specific about the product as is possible. If the product only contains one parameter,
+for instance, this can be stated in the title; however, if the product contains many parameters, then a more general term should be used in the title, and the parameters stated elsewhere in the metadata
+record (the abstract and/or the keywords). For a satellite product offering one main data parameter, the
+title will typically define which parameter is contained in the product, and from which instrument or
+instrument type it originates. For instance “AMSR-2 Sea Surface Temperature” or “SLSTR L1B radiances
+and brightness temperatures”. 
+
+Below is an example:
+....
+<gmd:identificationInfo>
+ <gmd:MD_DataIdentification>
+ <gmd:citation>
+ <gmd:CI_Citation>
+ <gmd:title>
+ <gco:CharacterString>AMSR-2 Sea Surface Temperature</gco:CharacterString>
+ </gmd:title>
+ <gmd:alternateTitle>
+ <gco:CharacterString>
+ AMSR-2 Sea Surface Temperature SST
+ </gco:CharacterString>
+ </gmd:alternateTitle>
+ . . . . . .
+ </gmd:CI_Citation>
+</gmd:citation>
+ . . .. .
+ </gmd:MD_DataIdentification>
+</gmd:identificationInfo>
+....
+
+==== Title for GTS bulletins
+
+The title for a GTS bulletin should also aim to be specific about the product, describing, as much as
+possible, the type of observation, and including the bulletin code or identifier, and original distributor (e.g.
+"from XXX").
+For instance:
+....
+<gmd:identificationInfo>
+ <gmd:MD_DataIdentification>
+ <gmd:citation>
+ <gmd:CI_Citation>
+ <gmd:title>
+ <gco:CharacterString>Sea level observations data [ SZPS01 ] for the South Pacific area</gco:CharacterString>
+ </gmd:title>
+....
+
+=== Enforcing some of the defined guidance rules
+
+Detect all template generated titles like IEDX02 BUFR bulletin available from EUMP (EUMETSAT - DARMSTADT).
+A script can be created to detect that kind of information and it could be regularly generated.
