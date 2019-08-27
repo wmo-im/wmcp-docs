@@ -1,4 +1,25 @@
 == I. GraphicOverview for non bulletins metadata records
 
-Check the presence of a graphicOverview thumbnail as it improves greatly
-the search experience when looking at search results.
+A thumbnail preview image for each available products improves greatly the user experience, allowing the user to recognise or understand by just looking at the thumbnail image, the product she is looking at in the search results. It makes also the WIS portals more user friendly and attractive to the users.
+
+Examples of catalogues using such information are here:
+
+- https://gisc.dwd.de[GISC DWD]
+
+- https://navigator.eumetsat.int/search?query=MSG%20RGB[EUMETSAT Product Navigator]
+
+=== J.2 Definition of a quality KPI regarding the presence of thumbnail preview
+
+To improve the search experience the presence of *<gmd:graphicOverview>* in <gmd:identificationInfo> should be checked and integrated as one of the KPI for improving the metadata quality
+
+....
+<gmd:graphicOverview>
+  <gmd:MD_BrowseGraphic>
+     <gmd:fileName>
+        <gco:CharacterString>https://navigator.eumetsat.int/preview/meteosat-msg_naturalenhncd.jpg</gco:CharacterString>
+     </gmd:fileName>
+  </gmd:MD_BrowseGraphic>
+</gmd:graphicOverview>
+....
+
+Checking automatically and regularly the presence of such information in the metadata can be integrated in the monitoring WIS portals in the data quality part. A first assessement can be performed by making simple python scripts.
