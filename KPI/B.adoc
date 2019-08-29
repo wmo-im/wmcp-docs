@@ -1,5 +1,18 @@
 == B. Good quality title
 
+=== To which WMCP element(s) does it apply?
+
+=== What is being measured?
+
+=== Why should we measure it?
+
+=== How is the measurement executed?
+
+=== What is (are) considered valid results?
+
+=== Guidance to score well on this assessment
+
+
 Titles should be consistent and contain meaningful and useful (from
 search/discovery perspective) content.
 
@@ -82,3 +95,7 @@ For instance:
 
 Detect all template generated titles like IEDX02 BUFR bulletin available from EUMP (EUMETSAT - DARMSTADT).
 A script can be created to detect that kind of information and it could be regularly generated.
+
+
+
+
