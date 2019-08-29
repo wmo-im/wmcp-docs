@@ -10,3 +10,13 @@ Why should we measure it?
 How is the measurement executed?
 What is (are) considered valid results?
 Guidance to score well on this assessment
+
+TEST, to add template structure
+
+X. KPI name
+To which WMCP element(s) does it apply?
+What is being measured?
+Why should we measure it?
+How is the measurement executed?
+What is (are) considered valid results?
+Guidance to score well on this assessment
