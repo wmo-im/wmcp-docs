@@ -22,4 +22,4 @@ To improve the search experience the presence of *<gmd:graphicOverview>* in <gmd
 </gmd:graphicOverview>
 ....
 
-Checking automatically and regularly the presence of such information in the metadata can be integrated in the monitoring WIS portals in the data quality part. A first assessement can be performed by making simple python scripts.
+Checking automatically and regularly the presence of such information in the metadata can be integrated in the monitoring WIS portals in the data quality part. A first assessement can be performed by making simple python scripts. To be tested
