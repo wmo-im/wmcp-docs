@@ -1,3 +1,12 @@
+== To which WMCP element(s) does it apply?
+== What is being measured?
+== Why should we measure it?
+== How is the measurement executed?
+== What is (are) considered valid results?
+== Guidance to score well on this assessment
+
+
+
 == I. GraphicOverview for non bulletins metadata records
 
 A thumbnail preview image for each available products improves greatly the user experience, allowing the user to recognise or understand by just looking at the thumbnail image, the product she is looking at in the search results. It makes also the WIS portals more user friendly and attractive to the users.
