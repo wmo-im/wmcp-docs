@@ -1,11 +1,3 @@
-== To which WMCP element(s) does it apply?
-== What is being measured?
-== Why should we measure it?
-== How is the measurement executed?
-== What is (are) considered valid results?
-== Guidance to score well on this assessment
-
-
 
 == I. GraphicOverview for non bulletins metadata records
 
@@ -17,9 +9,10 @@ Examples of catalogues using such information are here:
 
 - https://navigator.eumetsat.int/search?query=MSG%20RGB[EUMETSAT Product Navigator]
 
-=== J.2 Definition of a quality KPI regarding the presence of thumbnail preview
 
-To improve the search experience the presence of *<gmd:graphicOverview>* in <gmd:identificationInfo> should be checked and integrated as one of the KPI for improving the metadata quality
+=== I.1 To which WMCP element(s) does it apply ?
+
+This KPI applies to //<gmd:identificationInfo>/<gmd:MD_DataIdentification>/<gmd:graphicOverview>/<gmd:MD_BrowseGraphic/<gmd:fileName>
 
 ....
 <gmd:graphicOverview>
@@ -31,4 +24,22 @@ To improve the search experience the presence of *<gmd:graphicOverview>* in <gmd
 </gmd:graphicOverview>
 ....
 
-Checking automatically and regularly the presence of such information in the metadata can be integrated in the monitoring WIS portals in the data quality part. A first assessement can be performed by making simple python scripts. To be tested
+=== I.2 What is being measured ?
+
+The presence of that information (<gmd:graphicOverview>) is measured and can contribute to an overall quality score.
+
+=== I.3 Why should it be measured ?
+
+It should be measured because it contributes to the corresponding product information in the WIS catalogues and make them much more informative and user friendly by showing to the users an overview of the discovered products. It can be showed in the product overview or in the search results list.
+
+=== I.4 How is the measurement executed ?
+
+A program can get the entire list of metadata records from the OAI-PMH interface of the GISC catalogues and check for the presence of the <gmd:graphicOverview> in the individual records. That could be one rule defined and verified against each individual records and leading to the production of a quality report available from the web.
+
+=== I.5 What is (are) considered valid results?
+
+The presence of a link to a valid image file (that should be verified as well)
+
+=== I.6 Guidance to score well on this assessment
+
+In addition to the presence of the file it would be good to define a typical size (800x800 pixels for instance) such that all images are normalized.
