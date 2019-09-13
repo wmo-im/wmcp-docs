@@ -1,6 +1,3 @@
-== To which WMCP element(s) does it apply?
-
-
 == J. Broken links
 
 Detection of broken links contributing to the overall quality score.
