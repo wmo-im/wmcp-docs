@@ -67,11 +67,11 @@ Q: Would this be applicable to Open Data?
 </gmd:descriptiveKeywords>
 ....
 
-=== H.2 What is being measured ?
+=== K.2 What is being measured ?
 
 The presence of a Data Policy with the conditions of use that apply to the represented dataset and the presence of scope of distribution
 
-=== H.3 Why should it be measured ?
+=== K.3 Why should it be measured ?
 
 Users need to know the conditions of use of a particular dataset before accessing the data
 
@@ -79,24 +79,18 @@ Q: The guidelines mention that is is only mandatory for GTS data.   This should 
 
 Conditional.  Mandatory for WMO Core Profile 1.3, for GTS data.
 
-=== H.4 How is the measurement executed ?
-
+=== K.4 How is the measurement executed ?
 
 A program would need to check the presence of gmd:resourceConstraints
 
 Q: It would be difficult to measure publicly unsrestricted datasets with otherRestrictions, can we extend MD_RestrictionCode in WMOCodeList to include public ?
 
-=== H.5 What is (are) considered valid results?
+=== K.5 What is (are) considered valid results?
 
-Data parameters defined with the dataParam KeywordTypeCode within the same descriptiveKeywords block that are defined in the 
 
-http://codes.wmo.int/
 
-Q:Do we consider parameter definition from different dictionaries or thesaurus?
-Q:If the XML record contains data parameters from other dictionaries would it make it fail the KPI
+=== K.6 Guidance to score well on this assessment
 
-=== H.6 Guidance to score well on this assessment
 
-Data Parameters when applicable should be defined as per example from WMO code registry. 
 
-Q: What if a parameter is not part of the WMO registry?  
+
