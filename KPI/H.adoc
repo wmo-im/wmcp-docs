@@ -8,7 +8,9 @@ Data parameter keywords are optional elements syntactically.  An xml record will
 This KPI applies to //<gmd:identificationInfo>/*/gmd:descriptiveKeywords/*/gmd:keyword/
 
 Conditions:
+
 1. /gmd:MD_Metadata/gmd:identificationInfo/*/gmd:descriptiveKeywords/*/gmd:type/*/@codeListValue=”dataParam”
+
 2. If more than one data parameter keyword is entered, it should be defined withing the same descriptiveKeywords block 
 
 
