@@ -2,16 +2,24 @@
 
 === To which WMCP element(s) does it apply?
 
+/gmd:MD_Metadata/gmd:identificationInfo//gmd:citation//gmd:title
+
 === What is being measured?
+* field is not empty 
+* length is not too short or too long. (e.g. at least more than 3 characters and less than 150)
+* words are following Title case 
 
 === Why should we measure it?
+Title is the first reference to a resource displayed and is helps with initial identification. 
+If it's not available, too short, or too long then it makes it difficult for users understand the resource. 
 
 === How is the measurement executed?
+Programmatically
 
 === What is (are) considered valid results?
+A title field is
 
 === Guidance to score well on this assessment
-
 
 Titles should be consistent and contain meaningful and useful (from
 search/discovery perspective) content.
