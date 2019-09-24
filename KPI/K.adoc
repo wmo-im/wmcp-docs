@@ -92,5 +92,90 @@ Q: It would be difficult to measure publicly unsrestricted datasets with otherRe
 === K.6 Guidance to score well on this assessment
 
 
+== KK. Data Policy Possible combination
+*9.3 Defining WMO data policy and GTS priority for data published for global exchange*
+
+    . WMO data policy pertaining to Resolution 40 (Cg-XII), Resolution 25 (Cg-XIII), Resolution 60 (Cg-17) or other regulations (e.g. ICAO Annex 3 – Meteorological Services for International Air Navigation) shall be expressed using the following controlled vocabulary: “WMOEssential”, “WMOAdditional” and “WMOOther”. 
+
+    . A new code-list dictionary is published as part of this specification defining the set of permissible values for specifying the WMO data policy: WMO_DataLicenseCode (see Part C2, Table 14).
+
+    . Inclusion of the data policy in a metadata record describing information satisfies the requirements in the above-mentioned resolutions to notify the Secretary-General or third parties of limitations on the use of the information described in the metadata record (Resolution XX, EC-69). Additional information on the type of restriction on use should be included in the metadata record if the text of the resolution does not describe the restriction adequately. Further information on the description of data policy is provided in the Guide to the WMO Information System (WMO-No. 1061).
+
+    . WMO data policy is considered to be a legal constraint applying to both usage and access.
+
+    . More details on WMO data policy (Resolution 40 (Cg-XII), Resolution 25 (Cg-XIII) and Resolution 60
+(Cg-17)) are described at http://www.wmo.int/pages/about/exchangingdata_en.html.
+
+        ANNEX 1 TO RESOLUTION 40 (Cg-XII)
+        DATA AND PRODUCTS TO BE EXCHANGED WITHOUT CHARGE AND WITH NO CONDITIONS ON USE
+        Purpose
+        The purpose of this listing of meteorological and related data and products is to identify a minimum set of data and products which are essential to support WMO Programmes and which Members shall exchange without charge and with no conditions on use. The meteorological and related data and products which are essential to support WMO Programmes include, in general, the data from the RBSNs and as many data as possible that will assist in defining the state of the atmosphere at least on a scale of the order of 200 km in the horizontal and six to 12 hours in time.
+        Contents
+        (1) Six-hourly surface synoptic data from RBSNs, e.g. data in SYNOP, BUFR or other general purpose WMO Code;
+        (2) All available in situ observations from the marine environment, e.g. data in SHIP, BUOY, BATHY, TESAC codes, etc.;
+        (3) All available aircraft reports, e.g. data in AMDAR, AIREP codes, etc.;
+        (4) All available data from upper air sounding networks, e.g. data in TEMP, PILOT, TEMP SHIP, PILOT SHIP codes etc.;
+        (5) All reports from the network of stations recommended by the regional associations as necessary to provide a good representation of climate, e.g. data in CLIMAT/CLIMAT TEMP and CLIMAT SHIP/CLIMAT TEMP SHIP codes, etc.;
+        (6) Products distributed by WMCs and RSMCs to meet their WMO obligations;
+        (7) Severe weather warnings and advisories for the protection of life and property targeted upon end-users;
+        (8) Those data and products from operational meteorological satellites that are agreed between WMO and satellite operators. (These should include data and products necessary for operations regarding severe weather warnings and tropical cyclone warnings).
+
+
+    . WMO data policy shall be defined using the following element */gmd:MD_Metadata/gmd:identificationInfo//gmd:resourceConstraints//gmd:otherConstraints*. The presence of more than one WMO data-policy statement in a single metadata record yields an ambiguous state; a WIS discovery metadata record describing data for global exchange shall declare only a single WMO data policy.
+
+    . The presence of more than one WMO data-policy statement in a single metadata record yields an ambiguous state; a WIS discovery metadata record describing data for global exchange shall declare only a single WMO data policy.
+
+    . The WMO Core Metadata Profile places the following additional restriction on ISO 19115:2003/Cor. 1:2006: *9.3.1 A WIS discovery metadata record describing data for global exchange via WIS shall indicate the WMO data license as legal constraint (type: “otherConstraints”) using one and only one term from the WMO_DataLicenseCode code list.*
+
+    . Only exact matches to the terms from the code list are acceptable: “wmo-essential”, “WMO Essential” or “WmOaDdiTiOnaL” will all fail to validate.
+
+    . Where WMO data policies “WMOAdditional” or “WMOOther” are cited, a more precise definition of the additional access or usage restrictions may be provided by the data publisher.
+
+    . Guidance on the provision of alternative data policies and access or usage restrictions is provided at: http://wis.wmo.int/MD_DataPolicy.
+
+
+=== KK.1 To which WMCP element(s) does it apply ?
+
+ */gmd:MD_Metadata/gmd:identificationInfo//gmd:resourceConstraints//gmd:otherConstraints*
+
+=== KK.2 What is being measured?
+* This element shall occurs only once with allowed values *WMOEssential*, *WMOAdditional* and *WMOOther* by the fist bullet above.
+* In addition the table WMO_DataLicenseCode (see Part C2, Table 14) allows also *NoLimitation* value. It is also mentioned in the Guide to the WMO Information System (WMO-No. 1061) by which is mandatory and is related also to 
+
+ /gmd:MD_Metadata/gmd:identificationInfo/*/gmd:resourceConstraints/gmd:MD_LegalConstraints/ ↘
+ {complex content}, including
+ ↘/gmd:otherConstraints/*/text()=WMO_DataLicenseCode and
+ ↘/gmd:otherConstraints/*/text()=WMO_GTSProductCategoryCode
+ By the Guide to the WMO Information System (WMO-No.1061) is mandatory and shall
+
+* Only exact values of WMO_DataLicenseCode (see Part C2, Table 14) are allowed
+* the ANNEX 1 TO RESOLUTION 40 (Cg-XII) specify the set of products which have to be included into *WMOEssential*. Maybe the relation of product type to data police can be checked.
+* I am not sure if the relation between *WMO_DataLicenseCode* and *WMO_GTSProductCategoryCode* can be somehow checked.
+
+=== KK.3 Why should we measure it?
+The data policy category is used to specify the conditions under which the data products can be accessed and used. Completing the data policy section of a WCMP metadata record is dependent on the type of product, the data policy and the ways in which the product is being distributed. [WMO-No.1061]
+
+=== KK.4 How is the measurement executed?
+
+
+=== KK.5 What is (are) considered valid results?
+. The presence of one WMO_DataLicenseCode
+
+      <gmd:resourceConstraints>
+        <gmd:MD_Constraints>
+          <gmd:useLimitation>
+            <gco:CharacterString>WMOEssential</gco:CharacterString>
+          </gmd:useLimitation>
+        </gmd:MD_Constraints>
+      </gmd:resourceConstraints>
+ 
+. Maybe: If WMO_DataLicenseCode is equal to WMOEssential, only some set of product type can be allowed and vice versa if some product defined in ANNEX 1 TO RESOLUTION 40 (Cg-XII) is defined then WMO_DataLicenseCode has to be equal to WMOEssential.
+
+. some rule related to *scope of distribution*
+
+=== KK.6 Guidance to score well on this assessment
+ 
+
+
 
 
