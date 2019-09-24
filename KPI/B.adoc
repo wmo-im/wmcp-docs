@@ -19,9 +19,9 @@ Programmatically
 Manually
 
 === What is (are) considered valid results?
+Title field is populate, a proper length, and words are title case. 
 
 === Guidance to score well on this assessment
-
 Titles should be consistent and contain meaningful and useful (from
 search/discovery perspective) content.
 
