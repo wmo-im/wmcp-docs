@@ -1,5 +1,75 @@
 == H. Data Parameter Keyword
 
-A Data Parameter keyword should be defined and systematically added in
-the metadata. Do we need to extend the WMCP standard. Can we use the
-Data Parameter from http://codes.wmo.int ?
+Data parameter keywords are optional elements syntactically.  An xml record will validate without its presence.
+
+
+=== H.1 To which WMCP element(s) does it apply ?
+
+This KPI applies to //<gmd:identificationInfo>/*/gmd:descriptiveKeywords/*/gmd:keyword/
+
+Conditions:
+1. /gmd:MD_Metadata/gmd:identificationInfo/*/gmd:descriptiveKeywords/*/gmd:type/*/@codeListValue=”dataParam”
+2. If more than one data parameter keyword is entered, it should be defined withing the same descriptiveKeywords block 
+
+
+....
+<gmd:descriptiveKeywords>
+   <gmd:MD_Keywords>
+      <gmd:keyword> 
+         <gco:CharacterString>Dewpoint temperature</gco:CharacterString>
+      </gmd:keyword>
+       <gmd:type>
+          <!-- MD_KeywordTypeCode needs to point to https://wis.wmo.int/2012/codelists/WMOCodeLists.xml  -->
+          <gmd:MD_KeywordTypeCode codeList="https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#MD_KeywordTypeCode"  codeListValue="dataParam">dataParam</ gmd:MD_KeywordTypeCode>
+       </gmd:type>
+       <gmd:thesaurus>
+          <gmd:CI_Citation>
+             <gmd:title>
+                <gco:CharacterString>WMO Grib2 parameter list http://codes.wmo.int/grib2/codeflag/4.2/ </gco:CharacterString>
+             </gmd:title>
+              <gmd:date>
+                 <gmd:CI_Date>
+                    <gmd:date>
+                       <gco:Date>2016-06-25</gco:Date>
+                    </gmd:date>
+                 <gmd:dateType>
+                    <gmd:CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="revision">revision</gmd:CI_DateTypeCode>
+                 </gmd:dateType>
+              </gmd:CI_Date>
+           </gmd:date>
+       </gmd:CI_Citation>
+    </gmd:thesaurus>
+  </gmd:MD_Keywords>
+</gmd:descriptiveKeywords>
+....
+
+=== H.2 What is being measured ?
+
+The presence of data parameters defined as keywords 
+
+=== H.3 Why should it be measured ?
+
+Data Parameters  are very often entered in search engines and in many cases they represent underlying data sets.
+
+=== H.4 How is the measurement executed ?
+
+
+Program should check that all keywords of the KeywordTypeCode dataParam belong to the same block.
+Program should check that Parameter Names are defined in the WMO Codes registry:  http://codes.wmo.int/
+
+Q:Is there a way to specify the URI of the parameter name? e.g. Dew Point is http://codes.wmo.int/grib2/codeflag/4.2/_0-0-6
+
+=== H.5 What is (are) considered valid results?
+
+Data parameters defined with the dataParam KeywordTypeCode within the same descriptiveKeywords block that are defined in the 
+
+http://codes.wmo.int/
+
+Q:Do we consider parameter definition from different dictionaries or thesaurus?
+Q:If the XML record contains data parameters from other dictionaries would it make it fail the KPI
+
+=== H.6 Guidance to score well on this assessment
+
+Data Parameters when applicable should be defined as per example from WMO code registry. 
+
+Q: What if a parameter is not part of the WMO registry?  
