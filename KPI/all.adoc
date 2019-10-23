@@ -28,4 +28,4 @@ This document intend to summarize the different Key performance indicators that 
 
 == L. link:L.adoc [Distribution information to access the products p35 of metadata guidance]
 
-== M. link:M.adoc [Citation information to reference parties that have contributed to the creation of the dataset (presence of DOI)]
+== N. link:M.adoc [Citation information to reference parties that have contributed to the creation of the dataset (presence of DOI)]
