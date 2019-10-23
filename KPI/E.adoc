@@ -1,3 +1,11 @@
+
+== E. Temporal information
+
+Metadata records should contain the following temporal information:
+
+. Temporal extent: This element describes the period of time that the available product covers.
+. Data Update frequency: The temporal frequency at which the data is updated (ie, every x hours, days, ...).
+
 == E. Bulletin metadata availability
 
 It must contain some information regarding its availability (available
