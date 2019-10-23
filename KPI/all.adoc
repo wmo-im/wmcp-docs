@@ -12,7 +12,7 @@ This document intend to summarize the different Key performance indicators that 
 
 == D. link:D.adoc[Valid Station Identifier]
 
-== E. link:E.adoc[Bulletin metadata availability]
+== E. link:E.adoc[Temporal Information]
 
 == F. link:F.adoc[Link for WMOEssential data]
 
