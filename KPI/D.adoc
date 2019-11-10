@@ -1,10 +1,26 @@
 == D. Valid Station Identifier
+(a complement to a new ticket for 'Presence of a station identifier')
 
-A station id when provided should a WIGOS identifier long version, ie:
+== To which WMCP element(s) does it apply?
+Keyword, with KeywordTypeCode of 'place'
+== What is being measured?
+Whould containether a keyword of type 'place' contains a number;
+and
+Whether the format of that number matches one of (i) old format; (ii) new format as a string; (c) new format as a url [2 url options - containing the new number, one url option containing the oscar #)];  
+== Why should we measure it?
+ideally, all bulletin metadata should contain relevant (& up-to-date) station ids.  This will enhance 'discovery, by station'; and will thus also help with (autolinking) back to relevant bulletins.
+== How is the measurement executed?
+
+== What is (are) considered valid results?
+
+== Guidance to score well on this assessment
+
+== Background
+Current guidance says that when a station identifier is provided, then it should be a VALID WIGOS identifier url. 
+e.g. A station id when provided should a WIGOS identifier long version, ie:
+[?check the url format] 
 https://oscar.wmo.int/surface//index.html#/search/station/stationReportDetails/0-20000-0-10505
 
-Is it possible to define when it is applicable? The best would be to
-detect when a station identifier is missing? Any idea to it ?
+Is it possible to define when it is applicable?   
+(Note that the Guidance on this was formally released in 2017-06ish???; and each metadata record's metadata 'date' [?] field should indicate the date that the record was last revised.  (Though this might not have been implemented consistently either)
 
-When a station identifier is provided then it should be a VALID WIGOS
-identifier url. This can be verified
