@@ -12,8 +12,9 @@ Whole metadata record
 
 ==== What is being measured?
 Metadata record structure conforms to ISO/TS 19139:2007 standard : A WCMP Metadata record shall validate without error against 
-- the XML schema defined in  ISO/TS 19139:2007.  
+- the XML schema defined in  ISO/TS 19139:2007. ( add links here )  
 - the rule-based contraints listed in ISO/TS 19139:2007 Annex A Table A1
+
 
 ==== Why should we measure it?
 An invalid metadata record will be rejected by the WIS DAR catalog, so related datasets won’t be discoverables and accessibles.
