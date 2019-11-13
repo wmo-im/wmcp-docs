@@ -3,7 +3,7 @@
 They should be derived from WMCP documentation part 2 and the rubric
 checker. To be done
 ////
-
+yyyyy
 
 === A.1) XML encoding : ISO/TS 19139:2007 Compliance
 
