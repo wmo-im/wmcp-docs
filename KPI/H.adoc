@@ -1,18 +1,43 @@
 == H. Data Parameter Keyword
 
-Data parameter keywords are optional elements syntactically.  An xml record will validate without its presence.
+Data parameter keywords are optional elements syntactically.  
+An xml record will validate without its presence.
 
 
 === H.1 To which WMCP element(s) does it apply ?
 
 This KPI applies to //<gmd:identificationInfo>/*/gmd:descriptiveKeywords/*/gmd:keyword/
+WMO Core Profile extends the CodeLists for MD_keywordTypeCode code to include "dataParam" and "dataCentre" values. 
 
-Conditions:
+To express Parameter keywords, one shall specify:
 
-1. /gmd:MD_Metadata/gmd:identificationInfo/*/gmd:descriptiveKeywords/*/gmd:type/*/@codeListValue=”dataParam”
+1 Keyword: These can be expressed via CharacteString, or if reference is needed to a specific online resource/code an anchor could be introduced.
+See examples with Character String vs anchors:https://webgate.ec.europa.eu/fpfis/wikis/display/InspireMIG/Spatial+scope+code+list
 
-2. If more than one data parameter keyword is entered, it should be defined withing the same descriptiveKeywords block 
+2 type:  dataParam (MD_KeywordTypeCode)
+ /gmd:MD_Metadata/gmd:identificationInfo/*/gmd:descriptiveKeywords/*/gmd:type/*/@codeListValue=”dataParam”
 
+3 thesaurusName: Originating controlled vocabulary. 
+https://www.wmo.int/pages/prog/www/WIS/Metadata/WMOCoreMetadataVer1.html (suggest to add anchors for codelists)
+
+
+Restrictions:
+
+8.2.3 All keywords sourced from a particular keyword thesaurus shall be grouped into a
+single instance of the MD_Keywords class.
+
+
+
+Examples of Thesaurus:
+There is no formalised/standardised way to refer to a thesaurus
+
+WMO Codes:  http://codes.wmo.int/grib2/codeflag/4.2/
+
+GEMET - INSPIRE themes, version 1.0: https://www.eionet.europa.eu/gemet/en/inspire-themes/
+
+GCMD:https://earthdata.nasa.gov/earth-observation-data/find-data/gcmd/gcmd-keywords
+
+WMO_Codelists: http://wis.wmo.int/2013/codelists/WMOCodeLists.xml 
 
 ....
 <gmd:descriptiveKeywords>
@@ -23,11 +48,12 @@ Conditions:
        <gmd:type>
           <!-- MD_KeywordTypeCode needs to point to https://wis.wmo.int/2012/codelists/WMOCodeLists.xml  -->
           <gmd:MD_KeywordTypeCode codeList="https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#MD_KeywordTypeCode"  codeListValue="dataParam">dataParam</ gmd:MD_KeywordTypeCode>
+          
        </gmd:type>
        <gmd:thesaurus>
           <gmd:CI_Citation>
              <gmd:title>
-                <gco:CharacterString>WMO Grib2 parameter list http://codes.wmo.int/grib2/codeflag/4.2/ </gco:CharacterString>
+                <gco:CharacterString>WMO Codes</gco:CharacterString>
              </gmd:title>
               <gmd:date>
                  <gmd:CI_Date>
@@ -47,7 +73,7 @@ Conditions:
 
 === H.2 What is being measured ?
 
-The presence of data parameters defined as keywords 
+The presence of well defined data parameters, from well known thesaurus.
 
 === H.3 Why should it be measured ?
 
@@ -56,22 +82,18 @@ Data Parameters  are very often entered in search engines and in many cases they
 === H.4 How is the measurement executed ?
 
 
-Program should check that all keywords of the KeywordTypeCode dataParam belong to the same block.
-Program should check that Parameter Names are defined in the WMO Codes registry:  http://codes.wmo.int/
+Program should check that all keywords of the KeywordTypeCode dataParam belong to the same block
+In the presence of dataParam, ensure a Thesaurus is defined with the title as a minimum.
 
-Q:Is there a way to specify the URI of the parameter name? e.g. Dew Point is http://codes.wmo.int/grib2/codeflag/4.2/_0-0-6
 
 === H.5 What is (are) considered valid results?
 
-Data parameters defined with the dataParam KeywordTypeCode within the same descriptiveKeywords block that are defined in the 
-
-http://codes.wmo.int/
-
-Q:Do we consider parameter definition from different dictionaries or thesaurus?
-Q:If the XML record contains data parameters from other dictionaries would it make it fail the KPI
+Data parameters defined with the dataParam KeywordTypeCode within the same descriptiveKeywords block 
 
 === H.6 Guidance to score well on this assessment
+As a minimum:
+ Keyword and type should be present 
+Higher scores: 
+Fully referenced Thesaurus.
 
-Data Parameters when applicable should be defined as per example from WMO code registry. 
-
-Q: What if a parameter is not part of the WMO registry?  
+ 
